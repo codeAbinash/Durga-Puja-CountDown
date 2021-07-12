@@ -1,0 +1,184 @@
+@font-face {
+    font-family: ben;
+    src: url("fonts/Lipishree.ttf");
+}
+@font-face {
+    font-family: b;
+    src: url("fonts/OpenSans-ExtraBold.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: google;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.bengali{
+    font-family: ben;
+}
+.fullImg{
+    width: 93%;
+    display: block;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+.fullDiv{
+    min-height: 100px;
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    margin: 20px auto 20px auto;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1em;
+    /* cursor: pointer; */
+}
+.fullDiv h1{
+    /* cursor: pointer; */
+    font-family: b;
+}
+.first{
+    color: #ff4e50;
+    color: white;
+    /* background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%); */
+    /* box-shadow:0 0 20px 0px #7918F288; */
+    background-color: #ff4e50;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+    font-size: 0.9em;
+    padding:30px 20px;
+}
+.second{
+    font-family: ben;
+    background-color: transparent;
+    font-size: 1.4em;
+    background: -webkit-linear-gradient(#f9d423 0%, #ff4e50 100%);
+    -webkit-background-clip: text;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    /* color: #7918F2; */
+    text-transform: uppercase;
+    padding: 10px;
+}
+.second h1{
+    font-family: ben;
+}
+.third{
+    /* background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); */
+    background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+    min-height: 0;
+    color: white;
+    padding: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3em;
+}
+.third h1{
+    font-family: ben;
+    font-size: 1.5em;
+}
+.fourth{
+    background-color: white;
+    flex-direction: column;
+    font-family: google;
+    font-size: 0.8em;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    text-transform: capitalize;
+    color: white;
+}
+.fourth audio,.fifth audio{
+    margin-top: 20px;
+    width: 100%;
+}
+#hiddenText{
+    text-transform: none;
+    display:none;
+}
+.fifth{
+    background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+    font-size: 0.8em;
+    text-transform: capitalize;
+    color: #fff;
+    flex-direction: column;
+}
+.fifth input[type=text]{
+    width: 100%;
+    background-color: #ffffff55;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: b;
+}
+.sixth{
+    font-size: 0.8em;
+    text-transform: capitalize;
+    color: #fff;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+.sixth button{
+    font-size: 1.5em;
+    background-color: #Fff;
+    padding:15px 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: #000;
+}
+.wp{
+    font-size: 0.8em;
+    text-transform: capitalize;
+    color: #fff;
+    background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+
+}
+.link{
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    /* background-color: transparent; */
+    color: dodgerblue;
+    background: transparent;
+    font-weight: bold;
+}
+::placeholder{
+    color: #ffffffaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+.press{
+    transition: 0.1s linear transform;
+}
+.press:active{
+    transform: scale(0.98);
+}
+a{
+    text-decoration: none;
+}
