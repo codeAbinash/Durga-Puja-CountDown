@@ -9,20 +9,32 @@
 
 window.addEventListener("load",()=>{
     localStorage.durgaPujaYou = "";
-    document.getElementById("dhak").volume=0.3;
+    document.getElementById("dhak").volume=0.2;
     var perm = window.location.search.substr(1);
     var fromToTxt = "Dark Rose Software is wishing you";
     if(perm.length>0){
         perm = perm.split("-");
-        fromToTxt = `Hello ${perm[1]} !!!<br> ${perm[0]} is wishing you`;
-        localStorage.durgaPujaYou = perm[1];
+        fromToTxt = `Hello ${perm[0]} !!!<br> ${perm[1]} is wishing you`;
+        localStorage.durgaPujaYou = perm[0];
     }else{
-        alert("nothing");
+        //alert("nothing");
     }
-
+    
     document.getElementById("fromTo").innerHTML = fromToTxt;
-    document.getElementById("yourName").value = localStorage.durgaPujaYou + " (You)";
+    document.getElementById("yourName").value = localStorage.durgaPujaYou;
 
+    //Make the Countdown
+    var now = new Date();
+    var dt = new Date("11 October 2021");
+    var gap = dt.getTime() - now.getTime();
+    var day = Math.round(gap/(1000*60*60*24)) + 1;
+    
+    var numList = "০১২৩৪৫৬৭৮৯";
+    day = day.toString();
+    var numStr = "";
+    for(var i=0;i<day.length;i++)
+        numStr+=numList[Number(day[i])];
+    document.getElementById("left").innerHTML="আর " + numStr +" দিন"
 
 });
 var you = localStorage.durgaPujaYou;
@@ -37,15 +49,25 @@ function setFriendName(n){
     makeLink();
 }
 function makeLink(){
-    link ="https://"+ window.location.hostname + "/?"+friend+"-"+you;
+    var host = window.location.href.substr(0,window.location.href.indexOf("?"));
+    if(host.length==0)
+        host=window.location.href;
+    link =host + "?"+friend+"-"+you;
     document.getElementById("share").innerHTML = `Share Link to ${friend} <br><br>Click to Copy Link`;
     document.getElementById("hiddenText").value = link;
-    document.getElementById("shareWhatsapp").href ="whatsapp://send?text=" + link;
+    if(friend.length>0&&you.length>0){
+        document.getElementById("shareWhatsapp").href ="whatsapp://send?text=" + link;
+    }
 }
 function copyLink(){
-    var copyText = document.getElementById("hiddenText");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    alert("Copied the text: " + copyText.value);
+    if(friend.length>0&&you.length>0){
+        var copyText = document.getElementById("hiddenText");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Link Copied, now paste it to " + friend);
+    }else{
+        alert("Enter Your Friend's name & your name")
+    }
+
 }

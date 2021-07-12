@@ -99,7 +99,11 @@ body{
 }
 #hiddenText{
     text-transform: none;
-    display:none;
+    width: 90%;
+    color: dodgerblue;
+    border: none;
+    outline: none;
+    text-align: center;
 }
 .fifth{
     background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
@@ -148,7 +152,7 @@ body{
     text-transform: capitalize;
     color: #fff;
     background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
-
+    cursor: grab;
 }
 .link{
     background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
@@ -181,4 +185,8 @@ body{
 }
 a{
     text-decoration: none;
+    color: dodgerblue;
+}
+a:visited{
+    color: dodgerblue;
 }
