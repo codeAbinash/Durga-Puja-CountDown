@@ -19,22 +19,12 @@ window.addEventListener("load",()=>{
     }else{
         //alert("nothing");
     }
+    window.title = "Happy Durga puja in Advance from " + perm[1];
     
     document.getElementById("fromTo").innerHTML = fromToTxt;
     document.getElementById("yourName").value = localStorage.durgaPujaYou;
 
     //Make the Countdown
-    var now = new Date();
-    var dt = new Date("11 October 2021");
-    var gap = dt.getTime() - now.getTime();
-    var day = Math.round(gap/(1000*60*60*24)) + 1;
-    
-    var numList = "০১২৩৪৫৬৭৮৯";
-    day = day.toString();
-    var numStr = "";
-    for(var i=0;i<day.length;i++)
-        numStr+=numList[Number(day[i])];
-    document.getElementById("left").innerHTML="আর " + numStr +" দিন"
 
 });
 var you = localStorage.durgaPujaYou;
@@ -71,3 +61,15 @@ function copyLink(){
     }
 
 }
+
+
+var now = new Date();
+var dt = new Date("11 October 2021");
+var gap = dt.getTime() - now.getTime();
+var day = Math.round(gap/(1000*60*60*24)) + 1;
+var numList = "০১২৩৪৫৬৭৮৯";
+day = day.toString();
+var numStr = "";
+for(var i=0;i<day.length;i++)
+    numStr+=numList[Number(day[i])];
+document.getElementById("left").innerHTML="আর " + numStr +" দিন"
