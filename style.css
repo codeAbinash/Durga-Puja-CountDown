@@ -104,6 +104,22 @@ body{
     border: none;
     outline: none;
     text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+.copyLink{
+    border: none;
+    outline: none;
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    display: block;
+    margin: 15px auto;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:#fff ;
 }
 .fifth{
     background: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
@@ -131,9 +147,6 @@ body{
     text-transform: capitalize;
     color: #fff;
     flex-direction: column;
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
     background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
 }
 .sixth button{
@@ -155,8 +168,6 @@ body{
     cursor: grab;
 }
 .link{
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
     background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
     /* background-color: transparent; */
     color: dodgerblue;
