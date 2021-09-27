@@ -14,6 +14,8 @@ window.addEventListener("load",()=>{
     var fromToTxt = "Dark Rose Software is wishing you";
     if(perm.length>0){
         perm = perm.split("-");
+        // Remove Extra space from the names
+        perm = [perm[0].trim(),perm[1].trim()];
         fromToTxt = `Hello ${perm[0]} !!!<br> ${perm[1]} is wishing you`;
         localStorage.durgaPujaYou = perm[0];
     }else{
