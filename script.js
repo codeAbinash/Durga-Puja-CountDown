@@ -44,7 +44,7 @@ function makeLink(){
     var host = window.location.href.substr(0,window.location.href.indexOf("?"));
     if(host.length==0)
         host=window.location.href;
-    link =host + "?"+friend+"-"+you;
+    link =host + "?"+friend.trim()+"-"+you.trim();
     document.getElementById("share").innerHTML = `Share Link to ${friend} <br><br>Click to Copy Link`;
     document.getElementById("hiddenText").value = link;
     if(friend.length>0&&you.length>0){
