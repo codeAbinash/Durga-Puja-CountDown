@@ -14,6 +14,8 @@ window.addEventListener("load",()=>{
     var fromToTxt = "Dark Rose Software is wishing you";
     if(perm.length>0){
         perm = perm.split("-");
+        // Remove Extra space from the names
+        perm = [perm[0].trim(),perm[1].trim()];
         fromToTxt = `Hello ${perm[0]} !!!<br> ${perm[1]} is wishing you`;
         localStorage.durgaPujaYou = perm[0];
     }else{
@@ -42,7 +44,7 @@ function makeLink(){
     var host = window.location.href.substr(0,window.location.href.indexOf("?"));
     if(host.length==0)
         host=window.location.href;
-    link =host + "?"+friend+"-"+you;
+    link =host + "?"+friend.trim()+"-"+you.trim();
     document.getElementById("share").innerHTML = `Share Link to ${friend} <br><br>Click to Copy Link`;
     document.getElementById("hiddenText").value = link;
     if(friend.length>0&&you.length>0){
