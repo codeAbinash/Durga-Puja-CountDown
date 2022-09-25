@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     localStorage.durgaPujaYou = "";
     document.getElementById("dhak").volume = 0.2;
     var perm = window.location.search.substr(1);
-    var fromToTxt = "... is wishing you";
+    var fromToTxt = "Wishing you";
     if (perm.length > 0) {
         perm = perm.split("-");
         // Remove Extra space from the names
