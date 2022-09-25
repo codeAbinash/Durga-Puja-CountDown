@@ -1,4 +1,4 @@
-// var fromToTxt = "Dark Rose Software is wishing you";
+// var fromToTxt = "is wishing you";
 // if(perm.length>0){
     //     perm = perm.split("&");
     //     fromToTxt = `Hello ${perm[1]}!!!<br> ${perm[0]} is wishing you`;
@@ -66,7 +66,7 @@ function copyLink(){
 
 
 var now = new Date();
-var dt = new Date("11 October 2021");
+var dt = new Date("2 October 2022");
 var gap = dt.getTime() - now.getTime();
 var day = Math.round(gap/(1000*60*60*24)) + 1;
 var numList = "০১২৩৪৫৬৭৮৯";
